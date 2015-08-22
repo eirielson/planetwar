@@ -15,12 +15,15 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -142,6 +145,293 @@
         </object-type>
         <object-type name="Keyboard" sid="893455307116337">
             <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="RockTypeA" sid="3023505970884967">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="1669181748598832">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="711160228341966">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="4851234008817435">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="3087365072831903">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="16" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6975651685326981" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_A0015.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RockTypeB" sid="9689290914610749">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="9483326279213162">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="8606008041999895">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="3043910357098951">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="478384684713942">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9969146668491074" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0014.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_B0015.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RockTypeC" sid="1508794344840665">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="6423495424751608">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="5246444185009788">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="7086158049036851">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="7965092638851407">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2027436640610743" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0004.png">
+                        <collision-poly>
+                            <point x="0.328125" y="0.328125" />
+                            <point x="0.5" y="0.3125" />
+                            <point x="0.609375" y="0.390625" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.6875" y="0.6875" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0000.png">
+                        <collision-poly>
+                            <point x="0.40625" y="0.40625" />
+                            <point x="0.5" y="0.359375" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.703125" y="0.5" />
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.671875" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.328125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0001.png">
+                        <collision-poly>
+                            <point x="0.40625" y="0.40625" />
+                            <point x="0.5" y="0.328125" />
+                            <point x="0.671875" y="0.328125" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.71875" />
+                            <point x="0.359375" y="0.640625" />
+                            <point x="0.34375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0002.png">
+                        <collision-poly>
+                            <point x="0.40625" y="0.40625" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.640625" y="0.359375" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0003.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0.28125" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.65625" y="0.65625" />
+                            <point x="0.5" y="0.71875" />
+                            <point x="0.390625" y="0.609375" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0005.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.34375" />
+                            <point x="0.5" y="0.34375" />
+                            <point x="0.609375" y="0.390625" />
+                            <point x="0.734375" y="0.5" />
+                            <point x="0.671875" y="0.671875" />
+                            <point x="0.5" y="0.65625" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.34375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0006.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.359375" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.765625" y="0.5" />
+                            <point x="0.640625" y="0.640625" />
+                            <point x="0.5" y="0.640625" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.265625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0007.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0.359375" />
+                            <point x="0.65625" y="0.34375" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.640625" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.296875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0008.png">
+                        <collision-poly>
+                            <point x="0.40625" y="0.40625" />
+                            <point x="0.5" y="0.328125" />
+                            <point x="0.671875" y="0.328125" />
+                            <point x="0.703125" y="0.5" />
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.65625" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.328125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0009.png">
+                        <collision-poly>
+                            <point x="0.40625" y="0.40625" />
+                            <point x="0.5" y="0.28125" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.359375" y="0.640625" />
+                            <point x="0.359375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0010.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.640625" y="0.359375" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0011.png">
+                        <collision-poly>
+                            <point x="0.359375" y="0.359375" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.65625" y="0.5" />
+                            <point x="0.640625" y="0.640625" />
+                            <point x="0.5" y="0.703125" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0012.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.34375" />
+                            <point x="0.5" y="0.3125" />
+                            <point x="0.609375" y="0.390625" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.6875" y="0.6875" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.359375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0013.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.34375" />
+                            <point x="0.5" y="0.328125" />
+                            <point x="0.609375" y="0.390625" />
+                            <point x="0.703125" y="0.5" />
+                            <point x="0.65625" y="0.65625" />
+                            <point x="0.5" y="0.65625" />
+                            <point x="0.40625" y="0.59375" />
+                            <point x="0.296875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0014.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.34375" />
+                            <point x="0.609375" y="0.390625" />
+                            <point x="0.765625" y="0.5" />
+                            <point x="0.640625" y="0.640625" />
+                            <point x="0.5" y="0.640625" />
+                            <point x="0.390625" y="0.609375" />
+                            <point x="0.28125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rocks\rock_type_C0015.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0.359375" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.734375" y="0.5" />
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.65625" />
+                            <point x="0.359375" y="0.640625" />
+                            <point x="0.28125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
         <object-type name="Explosion" sid="5781211356968397">
             <plugin id="Sprite" />
