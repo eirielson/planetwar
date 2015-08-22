@@ -245,7 +245,7 @@
             </conditions>
             <actions>
                 <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="4863909693081114" type="Player">
-                    <param id="0" name="Acceleration">500</param>
+                    <param id="0" name="Acceleration">150</param>
                     <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeA.X, RockTypeA.Y)</param>
                 </action>
                 <action id="-21" name="Rotate toward position" sid="1901848867721573" type="Player">
@@ -263,7 +263,7 @@
             </conditions>
             <actions>
                 <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="5943042282349785" type="Player">
-                    <param id="0" name="Acceleration">300</param>
+                    <param id="0" name="Acceleration">100</param>
                     <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeB.X, RockTypeB.Y)</param>
                 </action>
                 <action id="-21" name="Rotate toward position" sid="5948335404279462" type="Player">
@@ -281,7 +281,7 @@
             </conditions>
             <actions>
                 <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="6997690585031224" type="Player">
-                    <param id="0" name="Acceleration">150</param>
+                    <param id="0" name="Acceleration">50</param>
                     <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeC.X, RockTypeC.Y)</param>
                 </action>
                 <action id="-21" name="Rotate toward position" sid="4347419571068033" type="Player">
