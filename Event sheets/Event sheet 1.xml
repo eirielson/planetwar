@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="3465027112532462">
+            <conditions>
+                <condition id="-18" name="On created" sid="4348136896578756" type="Player" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="8292355696391585">
+            <conditions>
+                <condition id="2" name="Key is down" sid="726433242051152" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="7106931257568827" type="Player">
+                    <param id="0" name="Acceleration">100</param>
+                    <param id="1" name="Angle">Self.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8088263289291668">
+            <conditions>
+                <condition id="2" name="Key is down" sid="4553463299127424" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="3" name="Accelerate" sid="637813377810522" type="Player">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Acceleration">-100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8639802516517064">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3285508604449248" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="1509673252242455" type="Player">
+                    <param id="0" name="Degrees">125 * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3321191110082263">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9225295119645095" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-19" name="Rotate counter-clockwise" sid="1922951964381868" type="Player">
+                    <param id="0" name="Degrees">125 * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9878795812103153">
+            <conditions>
+                <condition id="2" name="Key is down" sid="4264170483897828" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="9498505762313886" type="Player">
+                    <param id="0" name="Acceleration">200</param>
+                    <param id="1" name="Angle">Self.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6136589433379856">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="5803816440478307" type="Player" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="8538103978909743" type="PlayerPlanet">
+                    <param id="0" name="Duration">2.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;PlayerRespawn&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4856421294098489">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="9605614387060807" type="PlayerPlanet">
+                    <param id="0" name="Tag">&quot;PlayerRespawn&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="4246940515402553" type="System">
+                    <param id="0" name="Object to create">Player</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">PlayerPlanet.X + PlayerPlanet.Width/2</param>
+                    <param id="3" name="Y">PlayerPlanet.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

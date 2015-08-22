@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>38vn3zkpk5n49</unique-id>
+    <saved-with-version>21000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>728</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground" sid="9785205110021845">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Backgrounds\back_3.png" />
+        </object-type>
+        <object-type name="PlayerPlanet" sid="2893492999623762">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Vida" sid="7200592429993091" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="7222836036422853">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3144239255165788" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Planet\hjm-big_gas_planet_0.png">
+                        <collision-poly>
+                            <point x="0.145455" y="0.142857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854545" y="0.142857" />
+                            <point x="1" y="0.5" />
+                            <point x="0.854545" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.154545" y="0.848214" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyPlanet" sid="7908857051081276">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Vida" sid="6795469496878209" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="258175490596157">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379536048138135" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Planet\mars_type_planet.png">
+                        <collision-poly>
+                            <point x="0.144144" y="0.144144" />
+                            <point x="0.495495" y="0" />
+                            <point x="0.855856" y="0.144144" />
+                            <point x="1" y="0.495495" />
+                            <point x="0.855856" y="0.855856" />
+                            <point x="0.495495" y="1" />
+                            <point x="0.144144" y="0.855856" />
+                            <point x="0" y="0.495495" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="4733024144252313">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2428196683393679">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="4650242962326228">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="3004411663561167">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8350148282022809" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Rockets\rocket_type_A0004.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.4375" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.732422" y="0.375" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.738281" y="0.625" />
+                            <point x="0.5" y="0.625" />
+                            <point x="0.4375" y="0.5625" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="893455307116337">
+            <plugin id="Keyboard" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="4" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
