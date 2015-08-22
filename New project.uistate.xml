@@ -31,5 +31,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/PlayerPlanet/" />
         <folder expanded="1" path="animation-folder/EnemyPlanet/" />
         <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/Explosion/" />
+        <folder expanded="1" path="animation-folder/PlayerThrust/" />
     </folders-expanded>
 </c2uistate>
