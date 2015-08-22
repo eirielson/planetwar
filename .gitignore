@@ -1,0 +1,7 @@
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*.backup1
+*.autosave
