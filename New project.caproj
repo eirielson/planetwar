@@ -16,13 +16,13 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
@@ -139,6 +139,9 @@
                 <behavior-type name="LineOfSight" sid="4798604135619986">
                     <behavior id="LOS" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="331811247507237">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8350148282022809" speed="5">
@@ -174,9 +177,6 @@
                 </behavior-type>
                 <behavior-type name="Sine2" sid="3087365072831903">
                     <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="DragDrop" sid="1142669242206651">
-                    <behavior id="DragnDrop" />
                 </behavior-type>
                 <behavior-type name="Solid" sid="3362885079224411">
                     <behavior id="solid" />
