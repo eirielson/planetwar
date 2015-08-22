@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <comment>MOVIMENTACAO DO FOGUETE</comment>
         <event-block sid="3465027112532462">
             <conditions>
                 <condition id="-18" name="On created" sid="4348136896578756" type="Player" />
@@ -97,6 +98,32 @@
                     <param id="2" name="X">PlayerPlanet.X + PlayerPlanet.Width/2</param>
                     <param id="3" name="Y">PlayerPlanet.Y</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="9286412481838727">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="952060189248046" type="System" />
+            </conditions>
+            <actions>
+                <action id="-6" name="Set height" sid="3064105120083981" type="FuelBar">
+                    <param id="0" name="Height">(Player.Fuel / 500) * 150</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="2500499524711025" type="Player">
+                    <param id="0" name="Instance variable">Fuel</param>
+                    <param id="1" name="Value">0.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5506156743839871">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5824547125546718" type="Player">
+                    <param id="0" name="Instance variable">Fuel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="432952005297298" type="Player" />
             </actions>
         </event-block>
     </events>
