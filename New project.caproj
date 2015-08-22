@@ -56,7 +56,7 @@
     <object-folder>
         <object-type name="TiledBackground" sid="9785205110021845">
             <plugin id="TiledBg" />
-            <texture original-source="C:\Users\Master\Desktop\freebundle\Sprites\Space\Backgrounds\back_3.png" />
+            <texture original-source="C:\Users\Master\Desktop\Sprites\Space\Backgrounds\space-02.jpg" />
         </object-type>
         <object-type name="PlayerPlanet" sid="2893492999623762">
             <plugin id="Sprite" />
