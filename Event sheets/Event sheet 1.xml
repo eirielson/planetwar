@@ -229,5 +229,72 @@
                 <action id="-9" name="Destroy" sid="7846882577828599" type="Player" />
             </actions>
         </event-block>
+        <event-block sid="8806099232984154">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4818137127382468" type="Player">
+                    <param id="0" name="Object">RockTypeA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="4863909693081114" type="Player">
+                    <param id="0" name="Acceleration">5</param>
+                    <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeA.X, RockTypeA.Y)</param>
+                </action>
+                <action id="-21" name="Rotate toward position" sid="1901848867721573" type="Player">
+                    <param id="0" name="Degrees">0.7</param>
+                    <param id="1" name="X">RockTypeA.X</param>
+                    <param id="2" name="Y">RockTypeA.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="694665504871292">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="8391812729794162" type="Player">
+                    <param id="0" name="Object">RockTypeB</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="5943042282349785" type="Player">
+                    <param id="0" name="Acceleration">3</param>
+                    <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeA.X, RockTypeA.Y)</param>
+                </action>
+                <action id="-21" name="Rotate toward position" sid="5948335404279462" type="Player">
+                    <param id="0" name="Degrees">0.4</param>
+                    <param id="1" name="X">RockTypeA.X</param>
+                    <param id="2" name="Y">RockTypeA.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6543070030718322">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6226182155643973" type="Player">
+                    <param id="0" name="Object">RockTypeC</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="6997690585031224" type="Player">
+                    <param id="0" name="Acceleration">1</param>
+                    <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeA.X, RockTypeA.Y)</param>
+                </action>
+                <action id="-21" name="Rotate toward position" sid="4347419571068033" type="Player">
+                    <param id="0" name="Degrees">0.2</param>
+                    <param id="1" name="X">RockTypeA.X</param>
+                    <param id="2" name="Y">RockTypeA.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5663654922101848">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="978448546424669" type="PlayerPlanet">
+                    <param id="0" name="Object">RockTypeA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="3420438205214513" type="RockTypeA">
+                    <param id="0" name="Angle">-angle(PlayerPlanet.X, PlayerPlanet.Y, RockTypeA.X, RockTypeA.Y)</param>
+                    <param id="1" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

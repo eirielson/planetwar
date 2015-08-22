@@ -16,6 +16,8 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -64,6 +66,12 @@
             <behaviors>
                 <behavior-type name="Timer" sid="7222836036422853">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="4311873930405151">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="9801258553255779">
+                    <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -125,6 +133,9 @@
                 <behavior-type name="Solid" sid="7160958630770652">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="LineOfSight" sid="4798604135619986">
+                    <behavior id="LOS" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8350148282022809" speed="5">
@@ -160,6 +171,12 @@
                 </behavior-type>
                 <behavior-type name="Sine2" sid="3087365072831903">
                     <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="1142669242206651">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="3362885079224411">
+                    <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

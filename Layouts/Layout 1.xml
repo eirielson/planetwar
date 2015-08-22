@@ -111,6 +111,19 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>200</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -185,6 +198,14 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>70</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -314,12 +335,23 @@
                                 <magnitude-random>200</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>471</x>
-                        <y>128</y>
+                        <x>167</x>
+                        <y>290</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -340,7 +372,7 @@
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -364,7 +396,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -406,7 +438,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -419,7 +451,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -467,7 +499,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -480,7 +512,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -558,6 +590,17 @@
                                 <magnitude-random>200</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -589,7 +632,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -602,7 +645,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -645,7 +688,7 @@
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -669,7 +712,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -711,7 +754,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -724,7 +767,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
