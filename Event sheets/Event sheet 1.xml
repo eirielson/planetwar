@@ -175,5 +175,59 @@
                 <action id="-9" name="Destroy" sid="432952005297298" type="Player" />
             </actions>
         </event-block>
+        <event-block sid="4203148237261504">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2497660547830974" type="Player">
+                    <param id="0" name="Object">RockTypeA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4407895724037192" type="Player">
+                    <param id="0" name="Object">Explosion</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="3" name="Start" sid="4397953134790441" type="Explosion">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8551096805766977" type="Player" />
+            </actions>
+        </event-block>
+        <event-block sid="4220280128870912">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8092953987629748" type="Player">
+                    <param id="0" name="Object">RockTypeB</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9879385273572571" type="Player">
+                    <param id="0" name="Object">Explosion</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="3" name="Start" sid="3366636138497396" type="Explosion">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9586547841163951" type="Player" />
+            </actions>
+        </event-block>
+        <event-block sid="4255551102803061">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6773780873472366" type="Player">
+                    <param id="0" name="Object">RockTypeC</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2355300602114334" type="Player">
+                    <param id="0" name="Object">Explosion</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="3" name="Start" sid="7534080775969352" type="Explosion">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="7846882577828599" type="Player" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
