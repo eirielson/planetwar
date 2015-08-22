@@ -11,7 +11,9 @@
     <saved-with-version>21000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -125,6 +127,9 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Fuel" sid="3077630976522698" type="number" />
+                <instance-variable name="peerid" sid="4242622603592998" type="string" />
+                <instance-variable name="MP_X" sid="8507862866294134" type="number" />
+                <instance-variable name="MP_Y" sid="5849326751661167" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="4650242962326228">
@@ -1087,6 +1092,12 @@
             </behaviors>
             <texture />
         </object-type>
+        <object-type name="Multiplayer" sid="7940606896359674">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="PeerText" sid="9200599762322471">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1094,9 +1105,11 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Multiplayer.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="15" />
+        <global-instance type="Multiplayer" uid="17" />
     </global-instances>
     <sounds-folder />
     <music-folder />

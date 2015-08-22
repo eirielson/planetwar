@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Multiplayer</name>
+    <events>
+        <event-group description="" sid="1112726461285991" title="Multiplayer">
+            <sub-events>
+                <variable constant="0" name="MP_GAME" sid="2524563364923635" static="0" type="text">PlanetWar</variable>
+                <variable constant="0" name="MP_ROOM" sid="4297674506166759" static="0" type="text">planet-warRoom</variable>
+                <variable constant="0" name="MP_INSTANCE" sid="2280553090361217" static="0" type="text">planet-war-instance</variable>
+                <event-group description="" sid="2143059979661045" title="Signalling">
+                    <sub-events>
+                        <event-group description="" sid="7655528403335152" title="SyncObjectsAndConnect">
+                            <sub-events>
+                                <event-block sid="9249381755836897">
+                                    <conditions>
+                                        <condition id="-2" name="On start of layout" sid="8603590706841241" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="15" name="Add client input value" sid="1308056001871226" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;MP_X&quot;</param>
+                                            <param id="1" name="Precision">2</param>
+                                            <param id="2" name="Interpolation">0</param>
+                                        </action>
+                                        <action id="15" name="Add client input value" sid="8548689691523211" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;MP_Y&quot;</param>
+                                            <param id="1" name="Precision">2</param>
+                                            <param id="2" name="Interpolation">0</param>
+                                        </action>
+                                        <action id="11" name="Sync object" sid="9530005097742241" type="Multiplayer">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Data">3</param>
+                                            <param id="2" name="Precision">1</param>
+                                            <param id="3" name="Bandwidth">0</param>
+                                        </action>
+                                        <action id="12" name="Sync instance variable" sid="3422538528093103" type="Multiplayer">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Instance variable">Player|MP_X</param>
+                                            <param id="2" name="Precision">2</param>
+                                            <param id="3" name="Interpolation">0</param>
+                                            <param id="4" name="Client value tag">&quot;MP_X&quot;</param>
+                                        </action>
+                                        <action id="12" name="Sync instance variable" sid="4751728131890332" type="Multiplayer">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Instance variable">Player|MP_Y</param>
+                                            <param id="2" name="Precision">2</param>
+                                            <param id="3" name="Interpolation">0</param>
+                                            <param id="4" name="Client value tag">&quot;MP_Y&quot;</param>
+                                        </action>
+                                        <action id="11" name="Sync object" sid="7502875253793998" type="Multiplayer">
+                                            <param id="0" name="Object">RockTypeA</param>
+                                            <param id="1" name="Data">3</param>
+                                            <param id="2" name="Precision">1</param>
+                                            <param id="3" name="Bandwidth">0</param>
+                                        </action>
+                                        <action id="11" name="Sync object" sid="5942347366594532" type="Multiplayer">
+                                            <param id="0" name="Object">RockTypeB</param>
+                                            <param id="1" name="Data">3</param>
+                                            <param id="2" name="Precision">1</param>
+                                            <param id="3" name="Bandwidth">0</param>
+                                        </action>
+                                        <action id="11" name="Sync object" sid="7847721532839752" type="Multiplayer">
+                                            <param id="0" name="Object">RockTypeC</param>
+                                            <param id="1" name="Data">3</param>
+                                            <param id="2" name="Precision">1</param>
+                                            <param id="3" name="Bandwidth">0</param>
+                                        </action>
+                                        <action id="11" name="Sync object" sid="4526188514443121" type="Multiplayer">
+                                            <param id="0" name="Object">PlayerPlanet</param>
+                                            <param id="1" name="Data">1</param>
+                                            <param id="2" name="Precision">1</param>
+                                            <param id="3" name="Bandwidth">0</param>
+                                        </action>
+                                        <action id="11" name="Sync object" sid="6776747013875905" type="Multiplayer">
+                                            <param id="0" name="Object">EnemyPlanet</param>
+                                            <param id="1" name="Data">1</param>
+                                            <param id="2" name="Precision">1</param>
+                                            <param id="3" name="Bandwidth">0</param>
+                                        </action>
+                                        <action id="1" name="Connect" sid="3325023036206437" type="Multiplayer">
+                                            <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="8999130448424933">
+                            <conditions>
+                                <condition id="2" name="On connected" sid="5696129885184852" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Log in" sid="135216814650563" type="Multiplayer">
+                                    <param id="0" name="Alias">&quot;Jogador_&quot; &amp; int(random(1,9999))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3860172049349649">
+                            <conditions>
+                                <condition id="4" name="On logged in" sid="1762831412081089" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="19" name="Auto-join room" sid="4435726861533767" type="Multiplayer">
+                                    <param id="0" name="Game">MP_GAME</param>
+                                    <param id="1" name="Instance">MP_INSTANCE</param>
+                                    <param id="2" name="First room">MP_ROOM</param>
+                                    <param id="3" name="Max peers">2</param>
+                                    <param id="4" name="Locking">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6909517921275909">
+                            <conditions>
+                                <condition id="5" name="On joined room" sid="9145282414650269" type="Multiplayer" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7968252022269642">
+                                    <conditions>
+                                        <condition id="10" name="Is host" sid="8330940397290274" type="Multiplayer" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="13" name="Associate object with peer" sid="3357898927500623" type="Multiplayer">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Peer ID">Multiplayer.MyID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7139833313443404" type="Player">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Value">Multiplayer.MyID</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="4278230743363142" type="PeerText">
+                                            <param id="0" name="Text">&quot;Host: &quot; &amp; Multiplayer.MyAlias</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="350281736487418" type="System">
+                                            <param id="0" name="Group name">&quot;Host&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4441098164525482">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5567247701296555" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="1181307801237278" type="Player" />
+                                        <action id="-9" name="Destroy" sid="9942869465127222" type="PlayerPlanet" />
+                                        <action id="-9" name="Destroy" sid="7766522450645661" type="EnemyPlanet" />
+                                        <action id="-9" name="Destroy" sid="5587354731390567" type="RockTypeA" />
+                                        <action id="-9" name="Destroy" sid="5667348134766857" type="RockTypeB" />
+                                        <action id="-9" name="Destroy" sid="6440929429153901" type="RockTypeC" />
+                                        <action id="0" name="Set text" sid="9065059422120816" type="PeerText">
+                                            <param id="0" name="Text">&quot;Peer: &quot; &amp; Multiplayer.MyAlias</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="3511073734730416" type="System">
+                                            <param id="0" name="Group name">&quot;Peer&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="8683605522291143" title="Game">
+                    <sub-events>
+                        <event-group description="" sid="2578049447945752" title="Common">
+                            <sub-events>
+                                <event-block sid="6607074641334807">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4765139614018092" type="System">
+                                            <param id="0" name="First value">Player.peerid</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">Multiplayer.MyID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="9625124725836174">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="4124036107003556" type="Keyboard">
+                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="CustomMovement" id="3" name="Accelerate" sid="3121095709688217" type="Player">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Acceleration">-100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6292025590964178">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="5435984545023077" type="Keyboard">
+                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="8290034220051716" type="Player">
+                                                    <param id="0" name="Acceleration">100</param>
+                                                    <param id="1" name="Angle">Self.Angle</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5750273563824812">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="3544386438273734" type="Keyboard">
+                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-18" name="Rotate clockwise" sid="1269297182138003" type="Player">
+                                                    <param id="0" name="Degrees">125 * dt</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9444327413055117">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="3697218278397777" type="Keyboard">
+                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-19" name="Rotate counter-clockwise" sid="9798889687410538" type="Player">
+                                                    <param id="0" name="Degrees">125 * dt</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5127286182797839">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="8170365436658475" type="Keyboard">
+                                                    <param id="0" name="Key">32 (Space)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="2651859497727247" type="Player">
+                                                    <param id="0" name="Acceleration">200</param>
+                                                    <param id="1" name="Angle">Self.Angle</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" inactive="1" sid="2566999052613671" title="Host">
+                            <sub-events>
+                                <event-block sid="1000117773886535">
+                                    <conditions>
+                                        <condition id="11" name="On peer connected" sid="2198026165426442" type="Multiplayer" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="710021795090424" type="System">
+                                            <param id="0" name="Object to create">Player</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">100</param>
+                                            <param id="3" name="Y">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" inactive="1" sid="5429830637836271" title="Peer">
+                            <sub-events>
+                                <event-block sid="3025312969645265">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="8117604975218223" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1840752881418209" type="Player">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                                        </action>
+                                        <action id="13" name="Associate object with peer" sid="5872361177425059" type="Multiplayer">
+                                            <param id="0" name="Object">Player</param>
+                                            <param id="1" name="Peer ID">Player.peerid</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3531088469325559">
+                                            <conditions>
+                                                <condition id="-1" name="Every tick" sid="6828244135020659" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-6" name="Set height" sid="6109474655984827" type="FuelBar">
+                                                    <param id="0" name="Height">(Player.Fuel / 500) * 150</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="1230329994601551" type="Player">
+                                                    <param id="0" name="Instance variable">Fuel</param>
+                                                    <param id="1" name="Value">0.5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>Multiplayer</include>
         <comment>MOVIMENTACAO DO FOGUETE</comment>
         <event-block sid="3465027112532462">
             <conditions>
@@ -22,69 +23,6 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="1265901348705335" type="PlayerThrust">
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8292355696391585">
-            <conditions>
-                <condition id="2" name="Key is down" sid="726433242051152" type="Keyboard">
-                    <param id="0" name="Key">38 (Up arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="7106931257568827" type="Player">
-                    <param id="0" name="Acceleration">100</param>
-                    <param id="1" name="Angle">Self.Angle</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8088263289291668">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4553463299127424" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" id="3" name="Accelerate" sid="637813377810522" type="Player">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Acceleration">-100</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8639802516517064">
-            <conditions>
-                <condition id="2" name="Key is down" sid="3285508604449248" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-18" name="Rotate clockwise" sid="1509673252242455" type="Player">
-                    <param id="0" name="Degrees">125 * dt</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3321191110082263">
-            <conditions>
-                <condition id="2" name="Key is down" sid="9225295119645095" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-19" name="Rotate counter-clockwise" sid="1922951964381868" type="Player">
-                    <param id="0" name="Degrees">125 * dt</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9878795812103153">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4264170483897828" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="9498505762313886" type="Player">
-                    <param id="0" name="Acceleration">200</param>
-                    <param id="1" name="Angle">Self.Angle</param>
                 </action>
             </actions>
         </event-block>
@@ -147,20 +85,6 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="6087851254439357" type="Explosion" />
-            </actions>
-        </event-block>
-        <event-block sid="9286412481838727">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="952060189248046" type="System" />
-            </conditions>
-            <actions>
-                <action id="-6" name="Set height" sid="3064105120083981" type="FuelBar">
-                    <param id="0" name="Height">(Player.Fuel / 500) * 150</param>
-                </action>
-                <action id="-12" name="Subtract from" sid="2500499524711025" type="Player">
-                    <param id="0" name="Instance variable">Fuel</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="4203148237261504">
