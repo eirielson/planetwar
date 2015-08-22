@@ -114,7 +114,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>200</range>
+                                <range>150</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -154,6 +154,14 @@
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>150</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -350,8 +358,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>167</x>
-                        <y>290</y>
+                        <x>507</x>
+                        <y>203</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -372,7 +380,7 @@
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -396,7 +404,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -411,8 +419,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>615</x>
-                        <y>373</y>
+                        <x>583</x>
+                        <y>572</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -438,7 +446,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -451,7 +459,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -499,7 +507,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -512,7 +520,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -533,8 +541,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>701</x>
-                        <y>423</y>
+                        <x>771</x>
+                        <y>585</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -605,8 +613,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>845</x>
-                        <y>571</y>
+                        <x>843</x>
+                        <y>356</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -632,7 +640,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -645,7 +653,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -666,8 +674,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>427</x>
-                        <y>600</y>
+                        <x>547</x>
+                        <y>437</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -688,7 +696,7 @@
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -712,7 +720,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>13</period>
@@ -727,8 +735,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>363</x>
-                        <y>550</y>
+                        <x>314</x>
+                        <y>468</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -754,7 +762,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -767,7 +775,7 @@
                         </behavior-instance>
                         <behavior-instance type="Sine2">
                             <properties>
-                                <active-on-start>No</active-on-start>
+                                <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>
@@ -790,6 +798,78 @@
                     <world>
                         <x>259</x>
                         <y>177</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RockTypeA" uid="16">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Wrap">
+                            <properties>
+                                <wrap-to>Layout</wrap-to>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>180</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>9</period>
+                                <period-random>13</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>100</magnitude>
+                                <magnitude-random>200</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine2">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>9</period>
+                                <period-random>13</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>100</magnitude>
+                                <magnitude-random>200</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>317</x>
+                        <y>599</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>

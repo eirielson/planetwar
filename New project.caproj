@@ -100,6 +100,9 @@
                 <behavior-type name="Solid" sid="5735835652286735">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="LineOfSight" sid="2921039224802121">
+                    <behavior id="LOS" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379536048138135" speed="5">
