@@ -5,55 +5,6 @@
     <events>
         <include>Multiplayer</include>
         <comment>MOVIMENTACAO DO FOGUETE</comment>
-        <event-block sid="3465027112532462">
-            <conditions>
-                <condition id="-18" name="On created" sid="4348136896578756" type="Player" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="1263939600410604" type="System">
-                    <param id="0" name="Object to create">PlayerThrust</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">Player.X - 24</param>
-                    <param id="3" name="Y">Player.Y</param>
-                </action>
-                <action id="-3" name="Set position" sid="7279507398442992" type="PlayerThrust">
-                    <param id="0" name="X">Player.X - 24</param>
-                    <param id="1" name="Y">Player.Y</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="1265901348705335" type="PlayerThrust">
-                    <param id="0" name="Pin to">Player</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6136589433379856">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="5803816440478307" type="Player" />
-            </conditions>
-            <actions>
-                <action behavior="Timer" id="0" name="Start timer" sid="8538103978909743" type="PlayerPlanet">
-                    <param id="0" name="Duration">2.0</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;PlayerRespawn&quot;</param>
-                </action>
-                <action id="-9" name="Destroy" sid="6551345540262044" type="PlayerThrust" />
-            </actions>
-        </event-block>
-        <event-block sid="4856421294098489">
-            <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="9605614387060807" type="PlayerPlanet">
-                    <param id="0" name="Tag">&quot;PlayerRespawn&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="4246940515402553" type="System">
-                    <param id="0" name="Object to create">Player</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">PlayerPlanet.X + PlayerPlanet.Width/2</param>
-                    <param id="3" name="Y">PlayerPlanet.Y</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="3083976419101817">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="3577853312675071" type="Player">
@@ -74,17 +25,6 @@
                     <param id="0" name="Instance variable">Vida</param>
                     <param id="1" name="Value">10</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="74448669835334">
-            <conditions>
-                <condition id="3" name="Compare frame" sid="1903919288543278" type="Explosion">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">Explosion.AnimationFrameCount - 1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="6087851254439357" type="Explosion" />
             </actions>
         </event-block>
         <event-block sid="4203148237261504">
@@ -139,26 +79,6 @@
                     <param id="0" name="From">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="7846882577828599" type="Player" />
-            </actions>
-        </event-block>
-        <event-block sid="7917021793084016">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="4056040175168527" type="Player">
-                    <param id="0" name="Instance variable">Fuel</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="3978757529267188" type="Player">
-                    <param id="0" name="Object">Explosion</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="3" name="Start" sid="4321187715031532" type="Explosion">
-                    <param id="0" name="From">1</param>
-                </action>
-                <action id="-9" name="Destroy" sid="8511176503672153" type="Player" />
             </actions>
         </event-block>
         <event-block sid="8806099232984154">

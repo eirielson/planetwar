@@ -108,6 +108,7 @@
                     </properties>
                     <instance-variables>
                         <Vida>100</Vida>
+                        <peerid></peerid>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -136,46 +137,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemyPlanet" uid="2">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Vida>100</Vida>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>150</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1202.508422852</x>
-                        <y>353</y>
-                        <z>0</z>
-                        <width>97.850280762</width>
-                        <height>94.143821716</height>
-                        <depth>0</depth>
-                        <hotspotX>0.504504502</hotspotX>
-                        <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -224,8 +185,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>174</x>
-                        <y>370</y>
+                        <x>474</x>
+                        <y>-80</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
@@ -246,8 +207,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>486</x>
-                        <y>-67</y>
+                        <x>604</x>
+                        <y>-71</y>
                         <z>0</z>
                         <width>110</width>
                         <height>110</height>

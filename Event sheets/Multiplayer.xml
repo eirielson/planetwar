@@ -5,6 +5,7 @@
     <events>
         <event-group description="" sid="1112726461285991" title="Multiplayer">
             <sub-events>
+                <variable constant="0" name="MP_PEERID_TURN" sid="9727958012525727" static="0" type="text"></variable>
                 <variable constant="0" name="MP_GAME" sid="2524563364923635" static="0" type="text">PlanetWar</variable>
                 <variable constant="0" name="MP_ROOM" sid="4297674506166759" static="0" type="text">planet-warRoom</variable>
                 <variable constant="0" name="MP_INSTANCE" sid="2280553090361217" static="0" type="text">planet-war-instance</variable>
@@ -77,6 +78,12 @@
                                             <param id="2" name="Precision">1</param>
                                             <param id="3" name="Bandwidth">0</param>
                                         </action>
+                                        <action id="11" name="Sync object" sid="4406650239249223" type="Multiplayer">
+                                            <param id="0" name="Object">FuelBar</param>
+                                            <param id="1" name="Data">1</param>
+                                            <param id="2" name="Precision">1</param>
+                                            <param id="3" name="Bandwidth">0</param>
+                                        </action>
                                         <action id="1" name="Connect" sid="3325023036206437" type="Multiplayer">
                                             <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
                                         </action>
@@ -119,16 +126,16 @@
                                         <condition id="10" name="Is host" sid="8330940397290274" type="Multiplayer" />
                                     </conditions>
                                     <actions>
-                                        <action id="13" name="Associate object with peer" sid="3357898927500623" type="Multiplayer">
-                                            <param id="0" name="Object">Player</param>
-                                            <param id="1" name="Peer ID">Multiplayer.MyID</param>
+                                        <action id="0" name="Set text" sid="4278230743363142" type="PeerText">
+                                            <param id="0" name="Text">&quot;Host: &quot; &amp; Multiplayer.MyAlias</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="7139833313443404" type="Player">
+                                        <action id="-10" name="Set value" sid="7309070965460303" type="PlayerPlanet">
                                             <param id="0" name="Instance variable">peerid</param>
                                             <param id="1" name="Value">Multiplayer.MyID</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="4278230743363142" type="PeerText">
-                                            <param id="0" name="Text">&quot;Host: &quot; &amp; Multiplayer.MyAlias</param>
+                                        <action id="13" name="Associate object with peer" sid="4908368330570763" type="Multiplayer">
+                                            <param id="0" name="Object">PlayerPlanet</param>
+                                            <param id="1" name="Peer ID">Multiplayer.MyID</param>
                                         </action>
                                         <action id="-12" name="Set group active" sid="350281736487418" type="System">
                                             <param id="0" name="Group name">&quot;Host&quot;</param>
@@ -147,6 +154,7 @@
                                         <action id="-9" name="Destroy" sid="5587354731390567" type="RockTypeA" />
                                         <action id="-9" name="Destroy" sid="5667348134766857" type="RockTypeB" />
                                         <action id="-9" name="Destroy" sid="6440929429153901" type="RockTypeC" />
+                                        <action id="-9" name="Destroy" sid="7958262854547536" type="FuelBar" />
                                         <action id="0" name="Set text" sid="9065059422120816" type="PeerText">
                                             <param id="0" name="Text">&quot;Peer: &quot; &amp; Multiplayer.MyAlias</param>
                                         </action>
@@ -239,8 +247,103 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="6027256681662588">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="7670296536285849" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="8742178878963" type="System">
+                                            <param id="0" name="Object to create">PlayerThrust</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">Player.X - 24</param>
+                                            <param id="3" name="Y">Player.Y</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="4030380498578879" type="PlayerThrust">
+                                            <param id="0" name="X">Player.X - 24</param>
+                                            <param id="1" name="Y">Player.Y</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="3505870575111783" type="PlayerThrust">
+                                            <param id="0" name="Pin to">Player</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="237873703736313" type="Player">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Value">MP_PEERID_TURN</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="1303212935608906" type="PeerText">
+                                            <param id="0" name="Text">&quot;MyID &quot; &amp; Multiplayer.MyID &amp; &quot; ID &quot; &amp; MP_PEERID_TURN</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3154124445841127">
+                                            <conditions>
+                                                <condition id="-1" name="Every tick" sid="6933503979953329" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-6" name="Set height" sid="1594254778187503" type="FuelBar">
+                                                    <param id="0" name="Height">(Player.Fuel / 500) * 150</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="7053898193359338" type="Player">
+                                                    <param id="0" name="Instance variable">Fuel</param>
+                                                    <param id="1" name="Value">0.5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="8138180487340441">
+                                    <conditions>
+                                        <condition id="-19" name="On destroyed" sid="976688189852457" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="5411072101182855" type="Player">
+                                            <param id="0" name="Object">Explosion</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="3" name="Start" sid="5414884648656935" type="Explosion">
+                                            <param id="0" name="From">1</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="1764385560421626" type="Player" />
+                                        <action id="-9" name="Destroy" sid="9175954990663998" type="PlayerThrust" />
+                                        <action disabled="1" id="-3" name="Create object" sid="9073749205809396" type="System">
+                                            <param id="0" name="Object to create">Player</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">PlayerPlanet.X + PlayerPlanet.Width/2</param>
+                                            <param id="3" name="Y">PlayerPlanet.Y</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5562626941304987">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="8919366841783311" type="PlayerPlanet">
+                                                    <param id="0" name="Instance variable">peerid</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">Player.peerid</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="3982080632821205" type="System">
+                                                    <param id="0" name="Variable">MP_PEERID_TURN</param>
+                                                    <param id="1" name="Value">PlayerPlanet.peerid</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                             </sub-events>
                         </event-group>
+                        <event-block sid="2017700791915637">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="4903814097577133" type="Explosion">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">Explosion.AnimationFrameCount - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2146617143623549" type="Explosion" />
+                            </actions>
+                        </event-block>
                         <event-group description="" inactive="1" sid="2566999052613671" title="Host">
                             <sub-events>
                                 <event-block sid="1000117773886535">
@@ -251,8 +354,38 @@
                                         <action id="-3" name="Create object" sid="710021795090424" type="System">
                                             <param id="0" name="Object to create">Player</param>
                                             <param id="1" name="Layer">1</param>
-                                            <param id="2" name="X">100</param>
-                                            <param id="3" name="Y">100</param>
+                                            <param id="2" name="X">PlayerPlanet.X + PlayerPlanet.Width/2</param>
+                                            <param id="3" name="Y">PlayerPlanet.Y</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="4477905212389577" type="System">
+                                            <param id="0" name="Object to create">PlayerPlanet</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">1202.508</param>
+                                            <param id="3" name="Y">353</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6610028019063382" type="PlayerPlanet">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                                        </action>
+                                        <action id="13" name="Associate object with peer" sid="4295835989421044" type="Multiplayer">
+                                            <param id="0" name="Object">PlayerPlanet</param>
+                                            <param id="1" name="Peer ID">Multiplayer.PeerID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7360608046994042">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="4622105389436175" type="PlayerPlanet" />
+                                        <condition id="-7" name="Compare instance variable" sid="3073623379785303" type="PlayerPlanet">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Multiplayer.HostID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8925896001297146" type="PlayerPlanet">
+                                            <param id="0" name="Animation">&quot;Enemy&quot;</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -260,32 +393,37 @@
                         </event-group>
                         <event-group description="" inactive="1" sid="5429830637836271" title="Peer">
                             <sub-events>
-                                <event-block sid="3025312969645265">
+                                <event-block sid="932476575891719">
                                     <conditions>
-                                        <condition id="-18" name="On created" sid="8117604975218223" type="Player" />
+                                        <condition id="-18" name="On created" sid="1833750624236337" type="PlayerPlanet" />
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="1840752881418209" type="Player">
+                                        <action id="-10" name="Set value" sid="6479752334695035" type="PlayerPlanet">
                                             <param id="0" name="Instance variable">peerid</param>
                                             <param id="1" name="Value">Multiplayer.PeerID</param>
                                         </action>
-                                        <action id="13" name="Associate object with peer" sid="5872361177425059" type="Multiplayer">
-                                            <param id="0" name="Object">Player</param>
-                                            <param id="1" name="Peer ID">Player.peerid</param>
+                                        <action id="13" name="Associate object with peer" sid="7996999098887954" type="Multiplayer">
+                                            <param id="0" name="Object">PlayerPlanet</param>
+                                            <param id="1" name="Peer ID">Multiplayer.PeerID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="6298425377766604" type="System">
+                                            <param id="0" name="Variable">MP_PEERID_TURN</param>
+                                            <param id="1" name="Value">Multiplayer.HostID</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="3531088469325559">
+                                        <event-block sid="9445366007357489">
                                             <conditions>
-                                                <condition id="-1" name="Every tick" sid="6828244135020659" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="1761908006111222" type="PlayerPlanet">
+                                                    <param id="0" name="Instance variable">peerid</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">Multiplayer.HostID</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-6" name="Set height" sid="6109474655984827" type="FuelBar">
-                                                    <param id="0" name="Height">(Player.Fuel / 500) * 150</param>
-                                                </action>
-                                                <action id="-12" name="Subtract from" sid="1230329994601551" type="Player">
-                                                    <param id="0" name="Instance variable">Fuel</param>
-                                                    <param id="1" name="Value">0.5</param>
+                                                <action id="4" name="Set animation" sid="1568939663750205" type="PlayerPlanet">
+                                                    <param id="0" name="Animation">&quot;Enemy&quot;</param>
+                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
