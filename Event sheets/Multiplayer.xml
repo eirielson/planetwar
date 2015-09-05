@@ -17,32 +17,28 @@
                                         <condition id="-2" name="On start of layout" sid="8603590706841241" type="System" />
                                     </conditions>
                                     <actions>
+                                        <action id="15" name="Add client input value" sid="9009989462349216" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;CurrentPlayer&quot;</param>
+                                            <param id="1" name="Precision">2</param>
+                                            <param id="2" name="Interpolation">1</param>
+                                        </action>
                                         <action id="11" name="Sync object" sid="1734778697327214" type="Multiplayer">
                                             <param id="0" name="Object">Controller</param>
                                             <param id="1" name="Data">0</param>
                                             <param id="2" name="Precision">1</param>
                                             <param id="3" name="Bandwidth">0</param>
                                         </action>
-                                        <action id="12" name="Sync instance variable" sid="6000646351527718" type="Multiplayer">
+                                        <action id="12" name="Sync instance variable" sid="6261062979535431" type="Multiplayer">
                                             <param id="0" name="Object">Controller</param>
-                                            <param id="1" name="Instance variable">Controller|CurrentTurnID</param>
-                                            <param id="2" name="Precision">1</param>
-                                            <param id="3" name="Interpolation">0</param>
-                                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                                            <param id="1" name="Instance variable">Controller|CurrentPlayer</param>
+                                            <param id="2" name="Precision">2</param>
+                                            <param id="3" name="Interpolation">1</param>
+                                            <param id="4" name="Client value tag">&quot;CurrentPlayer&quot;</param>
                                         </action>
-                                        <action id="12" name="Sync instance variable" sid="9938423920219303" type="Multiplayer">
-                                            <param id="0" name="Object">Controller</param>
-                                            <param id="1" name="Instance variable">Controller|HostID</param>
-                                            <param id="2" name="Precision">1</param>
-                                            <param id="3" name="Interpolation">0</param>
-                                            <param id="4" name="Client value tag">&quot;&quot;</param>
-                                        </action>
-                                        <action id="12" name="Sync instance variable" sid="4717891775899937" type="Multiplayer">
-                                            <param id="0" name="Object">Controller</param>
-                                            <param id="1" name="Instance variable">Controller|PeerID</param>
-                                            <param id="2" name="Precision">1</param>
-                                            <param id="3" name="Interpolation">0</param>
-                                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                                        <action id="15" name="Add client input value" sid="502615934073371" type="Multiplayer">
+                                            <param id="0" name="Tag">&quot;Fuel&quot;</param>
+                                            <param id="1" name="Precision">2</param>
+                                            <param id="2" name="Interpolation">1</param>
                                         </action>
                                         <action id="11" name="Sync object" sid="9530005097742241" type="Multiplayer">
                                             <param id="0" name="Object">Player</param>
@@ -53,9 +49,9 @@
                                         <action id="12" name="Sync instance variable" sid="1881849544804464" type="Multiplayer">
                                             <param id="0" name="Object">Player</param>
                                             <param id="1" name="Instance variable">Player|Fuel</param>
-                                            <param id="2" name="Precision">1</param>
-                                            <param id="3" name="Interpolation">0</param>
-                                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                                            <param id="2" name="Precision">2</param>
+                                            <param id="3" name="Interpolation">1</param>
+                                            <param id="4" name="Client value tag">&quot;Fuel&quot;</param>
                                         </action>
                                         <action id="11" name="Sync object" sid="7502875253793998" type="Multiplayer">
                                             <param id="0" name="Object">RockTypeA</param>
@@ -132,12 +128,8 @@
                                         <action id="0" name="Set text" sid="4278230743363142" type="PeerText">
                                             <param id="0" name="Text">&quot;Host: &quot; &amp; Multiplayer.MyAlias</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="8055820106512105" type="Controller">
-                                            <param id="0" name="Instance variable">HostID</param>
-                                            <param id="1" name="Value">Multiplayer.MyID</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="9884795744082978" type="Controller">
-                                            <param id="0" name="Instance variable">CurrentTurnID</param>
+                                        <action id="-10" name="Set value" sid="6633775703593638" type="PlayerPlanet">
+                                            <param id="0" name="Instance variable">peerid</param>
                                             <param id="1" name="Value">Multiplayer.MyID</param>
                                         </action>
                                         <action id="13" name="Associate object with peer" sid="4908368330570763" type="Multiplayer">
@@ -180,13 +172,7 @@
                         <event-group description="" sid="2578049447945752" title="Common">
                             <sub-events>
                                 <event-block sid="6607074641334807">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="4765139614018092" type="System">
-                                            <param id="0" name="First value">Controller.CurrentTurnID</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">Multiplayer.MyID</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions />
                                     <sub-events>
                                         <event-block sid="9625124725836174">
@@ -314,31 +300,11 @@
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="5562626941304987">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="8919366841783311" type="Controller">
-                                                    <param id="0" name="Instance variable">HostID</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">Controller.CurrentTurnID</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="3982080632821205" type="Controller">
-                                                    <param id="0" name="Instance variable">CurrentTurnID</param>
-                                                    <param id="1" name="Value">Controller.HostID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block sid="9433910642526003">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="8243784063389396" type="System" />
                                             </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="4870326012152569" type="Controller">
-                                                    <param id="0" name="Instance variable">CurrentTurnID</param>
-                                                    <param id="1" name="Value">Controller.PeerID</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -362,18 +328,6 @@
                                         <condition id="11" name="On peer connected" sid="2198026165426442" type="Multiplayer" />
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="-10" name="Set value" sid="9171059966304053" type="Controller">
-                                            <param id="0" name="Instance variable">HostID</param>
-                                            <param id="1" name="Value">Multiplayer.HostID</param>
-                                        </action>
-                                        <action disabled="1" id="-10" name="Set value" sid="9849380149588143" type="Controller">
-                                            <param id="0" name="Instance variable">CurrentTurnID</param>
-                                            <param id="1" name="Value">Multiplayer.HostID</param>
-                                        </action>
-                                        <action disabled="1" id="-10" name="Set value" sid="6610028019063382" type="Controller">
-                                            <param id="0" name="Instance variable">PeerID</param>
-                                            <param id="1" name="Value">Multiplayer.PeerID</param>
-                                        </action>
                                         <action id="-3" name="Create object" sid="710021795090424" type="System">
                                             <param id="0" name="Object to create">Player</param>
                                             <param id="1" name="Layer">1</param>
@@ -386,6 +340,10 @@
                                             <param id="2" name="X">1202.508</param>
                                             <param id="3" name="Y">353</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="6418360735038492" type="PlayerPlanet">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                                        </action>
                                         <action id="13" name="Associate object with peer" sid="4295835989421044" type="Multiplayer">
                                             <param id="0" name="Object">PlayerPlanet</param>
                                             <param id="1" name="Peer ID">Multiplayer.PeerID</param>
@@ -395,11 +353,6 @@
                                 <event-block sid="7360608046994042">
                                     <conditions>
                                         <condition id="-18" name="On created" sid="4622105389436175" type="PlayerPlanet" />
-                                        <condition id="-7" name="Compare instance variable" sid="3073623379785303" type="Controller">
-                                            <param id="0" name="Instance variable">PeerID</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">Multiplayer.HostID</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="8925896001297146" type="PlayerPlanet">
@@ -412,28 +365,15 @@
                         </event-group>
                         <event-group description="" inactive="1" sid="5429830637836271" title="Peer">
                             <sub-events>
-                                <event-block sid="4674443157962758">
-                                    <conditions />
-                                    <actions>
-                                        <action disabled="1" id="-10" name="Set value" sid="5893225687335224" type="Controller">
-                                            <param id="0" name="Instance variable">HostID</param>
-                                            <param id="1" name="Value">Multiplayer.HostID</param>
-                                        </action>
-                                        <action disabled="1" id="-10" name="Set value" sid="3709762380456907" type="Controller">
-                                            <param id="0" name="Instance variable">CurrentTurnID</param>
-                                            <param id="1" name="Value">Multiplayer.HostID</param>
-                                        </action>
-                                        <action disabled="1" id="-10" name="Set value" sid="6123075270432887" type="Controller">
-                                            <param id="0" name="Instance variable">PeerID</param>
-                                            <param id="1" name="Value">Multiplayer.MyID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block sid="932476575891719">
                                     <conditions>
                                         <condition id="-18" name="On created" sid="1833750624236337" type="PlayerPlanet" />
                                     </conditions>
                                     <actions>
+                                        <action id="-10" name="Set value" sid="8392019406023794" type="PlayerPlanet">
+                                            <param id="0" name="Instance variable">peerid</param>
+                                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                                        </action>
                                         <action id="13" name="Associate object with peer" sid="7996999098887954" type="Multiplayer">
                                             <param id="0" name="Object">PlayerPlanet</param>
                                             <param id="1" name="Peer ID">Multiplayer.PeerID</param>
@@ -441,13 +381,7 @@
                                     </actions>
                                     <sub-events>
                                         <event-block sid="9445366007357489">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="1761908006111222" type="Controller">
-                                                    <param id="0" name="Instance variable">PeerID</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">Multiplayer.HostID</param>
-                                                </condition>
-                                            </conditions>
+                                            <conditions />
                                             <actions>
                                                 <action id="4" name="Set animation" sid="1568939663750205" type="PlayerPlanet">
                                                     <param id="0" name="Animation">&quot;Enemy&quot;</param>

@@ -65,6 +65,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Vida" sid="7200592429993091" type="number" />
+                <instance-variable name="peerid" sid="6369185900120907" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="7222836036422853">
@@ -1113,10 +1114,19 @@
         <object-type global="1" name="Controller" sid="3407554140988837">
             <plugin id="Dictionary" />
             <instance-variables>
-                <instance-variable name="HostID" sid="7401636994179436" type="string" />
-                <instance-variable name="PeerID" sid="290246861643577" type="string" />
-                <instance-variable name="CurrentTurnID" sid="7579538740479757" type="string" />
+                <instance-variable name="CurrentPlayer" sid="842962989761036" type="number" />
             </instance-variables>
+        </object-type>
+        <object-type name="ControllerA" sid="6997215237451788">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="HostID" sid="9849510323404706" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9209861128787662" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

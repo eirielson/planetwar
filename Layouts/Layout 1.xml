@@ -108,6 +108,7 @@
                     </properties>
                     <instance-variables>
                         <Vida>100</Vida>
+                        <peerid></peerid>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -869,6 +870,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="ControllerA" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <HostID></HostID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>918</x>
+                        <y>-155</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -876,9 +902,7 @@
     <nonworld-instances>
         <instance type="Controller" uid="2">
             <instance-variables>
-                <HostID></HostID>
-                <PeerID></PeerID>
-                <CurrentTurnID></CurrentTurnID>
+                <CurrentPlayer>0</CurrentPlayer>
             </instance-variables>
         </instance>
     </nonworld-instances>
