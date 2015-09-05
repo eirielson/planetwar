@@ -12,16 +12,16 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="295159683456688" type="Player">
+                <action disabled="1" id="0" name="Spawn another object" sid="295159683456688" type="Player">
                     <param id="0" name="Object">Explosion</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="3" name="Start" sid="4396836270083371" type="Explosion">
+                <action disabled="1" id="3" name="Start" sid="4396836270083371" type="Explosion">
                     <param id="0" name="From">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="2741668297875985" type="Player" />
-                <action id="-12" name="Subtract from" sid="6550597778184079" type="EnemyPlanet">
+                <action disabled="1" id="-9" name="Destroy" sid="2741668297875985" type="Player" />
+                <action disabled="1" id="-12" name="Subtract from" sid="6550597778184079" type="EnemyPlanet">
                     <param id="0" name="Instance variable">Vida</param>
                     <param id="1" name="Value">10</param>
                 </action>
@@ -34,15 +34,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="4407895724037192" type="Player">
+                <action disabled="1" id="0" name="Spawn another object" sid="4407895724037192" type="Player">
                     <param id="0" name="Object">Explosion</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="3" name="Start" sid="4397953134790441" type="Explosion">
+                <action disabled="1" id="3" name="Start" sid="4397953134790441" type="Explosion">
                     <param id="0" name="From">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="8551096805766977" type="Player" />
+                <action disabled="1" id="-9" name="Destroy" sid="8551096805766977" type="Player" />
             </actions>
         </event-block>
         <event-block sid="4220280128870912">
@@ -52,15 +52,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="9879385273572571" type="Player">
+                <action disabled="1" id="0" name="Spawn another object" sid="9879385273572571" type="Player">
                     <param id="0" name="Object">Explosion</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="3" name="Start" sid="3366636138497396" type="Explosion">
+                <action disabled="1" id="3" name="Start" sid="3366636138497396" type="Explosion">
                     <param id="0" name="From">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="9586547841163951" type="Player" />
+                <action disabled="1" id="-9" name="Destroy" sid="9586547841163951" type="Player" />
             </actions>
         </event-block>
         <event-block sid="4255551102803061">
@@ -70,15 +70,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="2355300602114334" type="Player">
+                <action disabled="1" id="0" name="Spawn another object" sid="2355300602114334" type="Player">
                     <param id="0" name="Object">Explosion</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="3" name="Start" sid="7534080775969352" type="Explosion">
+                <action disabled="1" id="3" name="Start" sid="7534080775969352" type="Explosion">
                     <param id="0" name="From">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="7846882577828599" type="Player" />
+                <action disabled="1" id="-9" name="Destroy" sid="7846882577828599" type="Player" />
             </actions>
         </event-block>
         <event-block sid="8806099232984154">
@@ -88,11 +88,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="4863909693081114" type="Player">
+                <action behavior="CustomMovement" disabled="1" id="4" name="Accelerate toward angle" sid="4863909693081114" type="Player">
                     <param id="0" name="Acceleration">150</param>
                     <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeA.X, RockTypeA.Y)</param>
                 </action>
-                <action id="-21" name="Rotate toward position" sid="1901848867721573" type="Player">
+                <action disabled="1" id="-21" name="Rotate toward position" sid="1901848867721573" type="Player">
                     <param id="0" name="Degrees">0.7</param>
                     <param id="1" name="X">RockTypeA.X</param>
                     <param id="2" name="Y">RockTypeA.Y</param>
@@ -106,11 +106,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="5943042282349785" type="Player">
+                <action behavior="CustomMovement" disabled="1" id="4" name="Accelerate toward angle" sid="5943042282349785" type="Player">
                     <param id="0" name="Acceleration">100</param>
                     <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeB.X, RockTypeB.Y)</param>
                 </action>
-                <action id="-21" name="Rotate toward position" sid="5948335404279462" type="Player">
+                <action disabled="1" id="-21" name="Rotate toward position" sid="5948335404279462" type="Player">
                     <param id="0" name="Degrees">0.4</param>
                     <param id="1" name="X">RockTypeB.X</param>
                     <param id="2" name="Y">RockTypeB.Y</param>
@@ -124,11 +124,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="6997690585031224" type="Player">
+                <action behavior="CustomMovement" disabled="1" id="4" name="Accelerate toward angle" sid="6997690585031224" type="Player">
                     <param id="0" name="Acceleration">50</param>
                     <param id="1" name="Angle">angle(Player.X, Player.Y, RockTypeC.X, RockTypeC.Y)</param>
                 </action>
-                <action id="-21" name="Rotate toward position" sid="4347419571068033" type="Player">
+                <action disabled="1" id="-21" name="Rotate toward position" sid="4347419571068033" type="Player">
                     <param id="0" name="Degrees">0.2</param>
                     <param id="1" name="X">RockTypeC.X</param>
                     <param id="2" name="Y">RockTypeC.Y</param>
@@ -142,7 +142,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="3420438205214513" type="RockTypeA">
+                <action disabled="1" id="-23" name="Move at angle" sid="3420438205214513" type="RockTypeA">
                     <param id="0" name="Angle">-angle(PlayerPlanet.X, PlayerPlanet.Y, RockTypeA.X, RockTypeA.Y)</param>
                     <param id="1" name="Distance">2</param>
                 </action>
@@ -155,7 +155,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="6986413098190102" type="RockTypeA">
+                <action disabled="1" id="-23" name="Move at angle" sid="6986413098190102" type="RockTypeA">
                     <param id="0" name="Angle">-angle(PlayerPlanet.X, PlayerPlanet.Y, RockTypeA.X, RockTypeA.Y)</param>
                     <param id="1" name="Distance">2</param>
                 </action>
@@ -168,7 +168,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="5070729506160637" type="RockTypeB">
+                <action disabled="1" id="-23" name="Move at angle" sid="5070729506160637" type="RockTypeB">
                     <param id="0" name="Angle">-angle(PlayerPlanet.X, PlayerPlanet.Y, RockTypeB.X, RockTypeB.Y)</param>
                     <param id="1" name="Distance">2</param>
                 </action>
@@ -181,7 +181,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="6931696797264218" type="RockTypeB">
+                <action disabled="1" id="-23" name="Move at angle" sid="6931696797264218" type="RockTypeB">
                     <param id="0" name="Angle">-angle(PlayerPlanet.X, PlayerPlanet.Y, RockTypeB.X, RockTypeB.Y)</param>
                     <param id="1" name="Distance">2</param>
                 </action>
@@ -194,7 +194,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="8375703907175185" type="RockTypeC">
+                <action disabled="1" id="-23" name="Move at angle" sid="8375703907175185" type="RockTypeC">
                     <param id="0" name="Angle">-angle(PlayerPlanet.X, PlayerPlanet.Y, RockTypeC.X, RockTypeC.Y)</param>
                     <param id="1" name="Distance">2</param>
                 </action>
@@ -207,7 +207,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="3650192176378951" type="RockTypeC">
+                <action disabled="1" id="-23" name="Move at angle" sid="3650192176378951" type="RockTypeC">
                     <param id="0" name="Angle">-angle(PlayerPlanet.X, PlayerPlanet.Y, RockTypeC.X, RockTypeC.Y)</param>
                     <param id="1" name="Distance">2</param>
                 </action>

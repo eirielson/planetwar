@@ -10,6 +10,7 @@
     <unique-id>38vn3zkpk5n49</unique-id>
     <saved-with-version>21000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -64,7 +65,6 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Vida" sid="7200592429993091" type="number" />
-                <instance-variable name="peerid" sid="7690950440327651" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="7222836036422853">
@@ -142,9 +142,6 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Fuel" sid="3077630976522698" type="number" />
-                <instance-variable name="peerid" sid="4242622603592998" type="string" />
-                <instance-variable name="MP_X" sid="8507862866294134" type="number" />
-                <instance-variable name="MP_Y" sid="5849326751661167" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="4650242962326228">
@@ -1112,6 +1109,14 @@
         </object-type>
         <object-type name="PeerText" sid="9200599762322471">
             <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="Controller" sid="3407554140988837">
+            <plugin id="Dictionary" />
+            <instance-variables>
+                <instance-variable name="HostID" sid="7401636994179436" type="string" />
+                <instance-variable name="PeerID" sid="290246861643577" type="string" />
+                <instance-variable name="CurrentTurnID" sid="7579538740479757" type="string" />
+            </instance-variables>
         </object-type>
     </object-folder>
     <families />

@@ -108,7 +108,6 @@
                     </properties>
                     <instance-variables>
                         <Vida>100</Vida>
-                        <peerid></peerid>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -150,9 +149,6 @@
                     </properties>
                     <instance-variables>
                         <Fuel>500</Fuel>
-                        <peerid></peerid>
-                        <MP_X>0</MP_X>
-                        <MP_Y>0</MP_Y>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -877,6 +873,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="Controller" uid="2">
+            <instance-variables>
+                <HostID></HostID>
+                <PeerID></PeerID>
+                <CurrentTurnID></CurrentTurnID>
+            </instance-variables>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
